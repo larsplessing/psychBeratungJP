@@ -1,102 +1,43 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kontakt – Systemische Psychologische Beratung</title>
+  <title>Über uns – Systemische Psychologische Beratung</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="overlay"></div>
+  <header class="site-header">
     <nav class="navbar">
-      <div class="logo">IhreBeraterin<span class="dot">.</span></div>
-      <ul class="nav-links">
+      <a href="index.html" class="logo">IhreBeraterin<span>.</span></a>
+      <ul class="nav">
         <li><a href="index.html">Start</a></li>
-        <li><a href="about.html">Über uns</a></li>
-        <li><a href="contact.html" class="active">Kontakt</a></li>
+        <li><a href="about.html" class="active">Über uns</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
       </ul>
     </nav>
-    <div class="hero-content">
-      <h1>Kontakt & Termin</h1>
-      <p>Schreiben Sie mir oder buchen Sie direkt online Ihren Wunschtermin.</p>
-      <a href="#contactForm" class="btn-primary">Zum Kontaktformular</a>
+    <div class="hero hero-small">
+      <h1>Über Ihre Beraterin</h1>
+      <p>Erfahren Sie mehr über Qualifikation und Arbeitsweise.</p>
     </div>
   </header>
 
-  <!-- KONTAKTFORMULAR -->
-  <main>
-    <h2>Kontakt</h2>
-    <p>Sie möchten einen Termin vereinbaren oder haben Fragen? Kontaktieren Sie uns gerne.</p>
-
-    <form id="contactForm" novalidate>
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="name">Name<span aria-hidden="true">*</span></label>
-          <input type="text" id="name" name="name" placeholder="Ihr Name" required>
-          <small class="error" id="nameError">Bitte geben Sie Ihren Namen ein.</small>
-        </div>
-
-        <div class="form-group">
-          <label for="email">E-Mail<span aria-hidden="true">*</span></label>
-          <input type="email" id="email" name="email" placeholder="mail@beispiel.de" required>
-          <small class="error" id="emailError">Bitte geben Sie eine gültige E-Mail-Adresse ein.</small>
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Telefon (optional)</label>
-          <input type="tel" id="phone" name="phone" placeholder="0123 – 4567890">
-        </div>
-
-        <div class="form-group">
-          <label for="topic">Thema<span aria-hidden="true">*</span></label>
-          <select id="topic" name="topic" required>
-            <option value="" disabled selected>Wählen Sie ein Thema</option>
-            <option value="einzelberatung">Einzelberatung</option>
-            <option value="paarberatung">Paar- & Familienberatung</option>
-            <option value="online-coaching">Online-Coaching</option>
-          </select>
-          <small class="error" id="topicError">Bitte wählen Sie ein Thema aus.</small>
-        </div>
-
-        <div class="form-group full-width">
-          <label for="message">Nachricht<span aria-hidden="true">*</span></label>
-          <textarea id="message" name="message" rows="6" placeholder="Ihre Nachricht…" required></textarea>
-          <small class="error" id="messageError">Bitte geben Sie eine Nachricht ein.</small>
-        </div>
-
-        <div class="form-group full-width checkbox-group">
-          <input type="checkbox" id="consent" name="consent" required>
-          <label for="consent">Ich stimme der Verarbeitung meiner Daten gemäß Datenschutzerklärung zu<span
-              aria-hidden="true">*</span></label>
-          <small class="error" id="consentError">Bitte bestätigen Sie die Datenverarbeitung.</small>
-        </div>
+  <section class="about">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>Mein Ansatz</h2>
+        <p>Als zertifizierte systemische Therapeutin (DGSF) mit über 10 Jahren Erfahrung arbeite ich lösungsorientiert und wertschätzend. Gemeinsam entdecken wir Ihre Ressourcen und entwickeln nachhaltige Strategien für Ihr Wohlbefinden.</p>
+        <a href="contact.html" class="btn btn-secondary">Kontakt aufnehmen</a>
       </div>
-
-      <button type="submit" class="btn-primary">Nachricht senden</button>
-      <p id="formMessage" aria-live="polite"></p>
-    </form>
-  </main>
-
-
-  <!-- ANFAHRT -->
-  <section class="services">
-    <h2>Anfahrt</h2>
-    <p>Unsere Praxis befindet sich in der Innenstadt von Ludwigsburg, nur wenige Gehminuten vom Bahnhof entfernt.</p>
-    <!-- Hier könnte eine eingebettete Karte kommen -->
+      <div class="about-img">
+        <img src="images/beraterin.jpg" alt="Porträt der Beraterin">
+      </div>
+    </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 Systemische Psychologische Beratung – Alle Rechte vorbehalten</p>
-    <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+  <footer class="site-footer">
+    <p>© 2025 Systemische Psychologische Beratung</p>
+    <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
-
 </html>
