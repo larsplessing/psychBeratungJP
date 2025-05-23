@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Optional: local environment files
+.env
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VSCode (optional)
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Build or cache folders (falls du später etwas baust)
+dist/
+build/
+.cache/
