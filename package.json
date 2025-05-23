@@ -1,0 +1,12 @@
+{
+  "name": "gh-pages-express-website",
+  "version": "1.0.0",
+  "description": "Statische Website für psychologische Beratung mit Express lokal testbar",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
