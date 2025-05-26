@@ -2,42 +2,76 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Über uns – Systemische Psychologische Beratung</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kontakt – Systemische Psychologische Beratung</title>
+  <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar">
+  <header class="hero-sm">
+    <nav class="nav">
       <a href="index.html" class="logo">IhreBeraterin<span>.</span></a>
-      <ul class="nav">
+      <ul>
         <li><a href="index.html">Start</a></li>
-        <li><a href="about.html" class="active">Über uns</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
+        <li><a href="about.html">Über uns</a></li>
+        <li><a href="contact.html" class="active">Kontakt</a></li>
       </ul>
     </nav>
-    <div class="hero hero-small">
-      <h1>Über Ihre Beraterin</h1>
-      <p>Erfahren Sie mehr über Qualifikation und Arbeitsweise.</p>
+    <div class="hero-content">
+      <h1>Kontakt</h1>
+      <p>Vereinbaren Sie Ihren Termin oder senden Sie Ihre Anfrage.</p>
     </div>
   </header>
 
-  <section class="about">
-    <div class="about-content">
-      <div class="about-text">
-        <h2>Mein Ansatz</h2>
-        <p>Als zertifizierte systemische Therapeutin (DGSF) mit über 10 Jahren Erfahrung arbeite ich lösungsorientiert und wertschätzend. Gemeinsam entdecken wir Ihre Ressourcen und entwickeln nachhaltige Strategien für Ihr Wohlbefinden.</p>
-        <a href="contact.html" class="btn btn-secondary">Kontakt aufnehmen</a>
+  <section class="contact">
+    <form id="contactForm" novalidate>
+      <div class="fields">
+        <div class="field">
+          <label for="name">Name<span>*</span></label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="field">
+          <label for="email">E-Mail<span>*</span></label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="field full">
+          <label for="topic">Thema<span>*</span></label>
+          <select id="topic" required>
+            <option value="" disabled selected>Wählen Sie</option>
+            <option value="einzelberatung">Einzelberatung</option>
+            <option value="paarberatung">Paar- & Familienberatung</option>
+            <option value="online">Online-Coaching</option>
+          </select>
+        </div>
+        <div class="field full">
+          <label for="message">Nachricht<span>*</span></label>
+          <textarea id="message" rows="6" required></textarea>
+        </div>
       </div>
-      <div class="about-img">
-        <img src="images/beraterin.jpg" alt="Porträt der Beraterin">
-      </div>
-    </div>
+      <button type="submit" class="btn primary">Nachricht senden</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
   </section>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <p>© 2025 Systemische Psychologische Beratung</p>
     <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const form = e.target;
+      const [n,e1,t,m] = [form.name, form.email, form.topic, form.message];
+      const msg = document.getElementById('formMessage');
+      if (!n.value||!e1.value||!t.value||!m.value) {
+        msg.textContent = 'Bitte Pflichtfelder ausfüllen.';
+        msg.className = 'form-message error';
+        return;
+      }
+      msg.textContent = 'Danke! Ihre Nachricht wurde gesendet.';
+      msg.className = 'form-message success';
+      form.reset();
+    });
+  </script>
 </body>
 </html>

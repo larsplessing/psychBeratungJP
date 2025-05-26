@@ -1,25 +1,60 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Systemische Psychologische Beratung</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professionelle systemische Beratung für persönliche Entwicklung und Konfliktlösung">
+  <meta name="keywords" content="Psychologische Beratung, Systemische Therapie, Lebensberatung, Coaching">
+  <meta property="og:title" content="Systemische Psychologische Beratung">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/og-image.jpg">
+
+  <title>Start – Systemische Psychologische Beratung</title>
+
+  <!-- Preload Resources -->
+  <link rel="preload" href="css/index.css" as="style">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
 </head>
+
 <body>
-  <header class="site-header">
-    <nav class="navbar">
+  <header class="hero">
+    <nav class="nav">
       <a href="index.html" class="logo">IhreBeraterin<span>.</span></a>
-      <ul class="nav">
+
+      <!-- Hamburger Menu für Mobile -->
+      <button class="hamburger" aria-label="Menü öffnen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul class="nav-list">
         <li><a href="index.html" class="active">Start</a></li>
-        <li><a href="about.html">Über uns</a></li>
+        <li><a href="about.html">Über mich</a></li>
         <li><a href="contact.html">Kontakt</a></li>
       </ul>
     </nav>
-    <div class="hero">
+
+    <div class="hero-content">
       <h1>Systemische Psychologische Beratung</h1>
-      <p>Stärken entdecken · Lösungen gestalten · Lebensqualität erhöhen</p>
-      <a href="contact.html" class="btn btn-primary">Jetzt Termin vereinbaren</a>
+      <p class="hero-subtitle">Stärken entdecken · Lösungen gestalten · Lebensqualität erhöhen</p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn primary">Jetzt Termin vereinbaren</a>
+        <a href="about.html" class="btn secondary">Mehr erfahren</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span></span>
     </div>
   </header>
 
@@ -36,14 +71,22 @@
       </article>
       <article>
         <h3>Online-Coaching</h3>
-        <p>Flexible Terminvereinbarung per Videochat.</p>
+        <p>Flexible Beratung per Videochat – wann und wo Sie es brauchen.</p>
       </article>
     </div>
   </section>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <p>© 2025 Systemische Psychologische Beratung</p>
     <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function () {
+      this.classList.toggle('active');
+      document.querySelector('.nav-list').classList.toggle('active');
+    });
+  </script>
 </body>
+
 </html>
