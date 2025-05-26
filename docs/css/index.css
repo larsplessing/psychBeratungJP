@@ -28,7 +28,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -86,7 +85,7 @@ body {
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 152, 219, 0.8) 100%),
-              url('img/hero-bg.jpg') center/cover;
+              url('img/mentalHealth.jpg') center/cover;
   padding: 8rem 5% 4rem;
   text-align: center;
   color: var(--text-light);
@@ -288,5 +287,120 @@ body {
   
   .hero-content p {
     font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+/* css/main.css */
+/* (Beinhaltet die bereits erstellten Basis-Styles und wird ergänzt um:) */
+
+/* Small Hero Variant */
+.hero-sm {
+  min-height: 60vh;
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 152, 219, 0.8) 100%),
+              url('images/about-bg.jpg') center/cover;
+  padding: 8rem 5% 4rem;
+  text-align: center;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About Section */
+.about {
+  background: var(--bg-light);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-text {
+  padding: 2rem;
+}
+
+.about-text h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.profile-img {
+  border-radius: var(--rounded-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.profile-img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.qualifications {
+  margin: 2rem 0;
+}
+
+.qualifications h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.qualifications ul {
+  list-style-position: inside;
+  margin-left: 1rem;
+}
+
+.qualifications li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 1024px) {
+  .about-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-sm {
+    min-height: 50vh;
+    padding: 6rem 5% 2rem;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-img {
+    order: -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-sm {
+    min-height: 40vh;
+  }
+  
+  .about-text {
+    padding: 1rem;
   }
 }
