@@ -1,0 +1,13 @@
+<header>
+  <nav class="nav">
+    <a href="{{ '/' | relative_url }}" class="logo">IhreBeraterin<span>.</span></a>
+    <button class="hamburger" aria-label="Menü öffnen">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <ul class="nav-list">
+      <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Start</a></li>
+      <li><a href="{{ '/about/' | relative_url }}" {% if page.url contains 'about' %}class="active"{% endif %}>Über mich</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains 'contact' %}class="active"{% endif %}>Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
