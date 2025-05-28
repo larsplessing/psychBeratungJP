@@ -70,22 +70,7 @@
     <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', e => {
-      e.preventDefault();
-      const form = e.target;
-      const [n, e1, t, m] = [form.name, form.email, form.topic, form.message];
-      const msg = document.getElementById('formMessage');
-      if (!n.value || !e1.value || !t.value || !m.value) {
-        msg.textContent = 'Bitte Pflichtfelder ausfüllen.';
-        msg.className = 'form-message error';
-        return;
-      }
-      msg.textContent = 'Danke! Ihre Nachricht wurde gesendet.';
-      msg.className = 'form-message success';
-      form.reset();
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

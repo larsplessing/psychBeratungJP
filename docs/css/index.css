@@ -24,6 +24,7 @@ body {
 
 /* Navigation */
 .nav {
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,7 +81,7 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,7 +143,7 @@ body {
 /* Scroll Indicator */
 .hero-scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  top: 90%;
   left: 50%;
   transform: translateX(-50%);
 }
