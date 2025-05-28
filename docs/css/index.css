@@ -22,6 +22,13 @@ body {
   line-height: 1.6;
 }
 
+footer {
+  background: #f4f4f4;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 /* Navigation */
 .nav {
   height: 10vh;
@@ -404,4 +411,41 @@ body {
   .about-text {
     padding: 1rem;
   }
+}
+
+
+
+
+
+.contact {
+  padding: 1rem 5%;
+}
+
+
+form {
+  text-align: left;
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+form label {
+  display: block;
+  font-weight: bold;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  width: fit-content;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #28A745;
+  color: #fff;
+  cursor: pointer;
 }

@@ -28,46 +28,25 @@
     </nav>
   </header>
 
-  <section class="hero-sm">
-    <div class="hero-content">
+  <section class="hero">
+    <form action="https://formspree.io/f/your-form-id" method="POST">
       <h1>Kontakt</h1>
-      <p>Vereinbaren Sie Ihren Termin oder senden Sie Ihre Anfrage.</p>
-    </div>
-  </section>
-
-  <section class="contact">
-    <form id="contactForm" novalidate>
-      <div class="fields">
-        <div class="field">
-          <label for="name">Name<span>*</span></label>
-          <input type="text" id="name" required>
-        </div>
-        <div class="field">
-          <label for="email">E-Mail<span>*</span></label>
-          <input type="email" id="email" required>
-        </div>
-        <div class="field full">
-          <label for="topic">Thema<span>*</span></label>
-          <select id="topic" required>
-            <option value="" disabled selected>Wählen Sie</option>
-            <option value="einzelberatung">Einzelberatung</option>
-            <option value="paarberatung">Paar- & Familienberatung</option>
-            <option value="online">Online-Coaching</option>
-          </select>
-        </div>
-        <div class="field full">
-          <label for="message">Nachricht<span>*</span></label>
-          <textarea id="message" rows="6" required></textarea>
-        </div>
-      </div>
-      <button type="submit" class="btn primary">Nachricht senden</button>
-      <p id="formMessage" class="form-message"></p>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">E-Mail</label>
+      <input type="email" id="email" name="_replyto" required>
+      <label for="message">Nachricht</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+      <button type="submit">Absenden</button>
     </form>
   </section>
 
-  <footer class="footer">
+  <footer>
     <p>© 2025 Systemische Psychologische Beratung</p>
-    <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <p>
+      <a href="impressum.html">Impressum</a> ·
+      <a href="datenschutz.html">Datenschutz</a>
+    </p>
   </footer>
 
   <script src="js/main.js"></script>
